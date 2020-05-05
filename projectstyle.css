@@ -35,7 +35,7 @@ template {display: none;}
 [hidden] {display: none;}
 
 body{line-height: 1.5; font-family: 'Open Sans', sans-serif; font-size: 1em; color: #33393D;max-width:1500px;min-width:100px}
-h1{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 4em; color: #33393D;}
+h1{font-family: 'Prompt', sans-serif; font-weight: normal; font-size: 3.5em; color: #33393D;}
 h2{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 2.5em; color: #33393D;}
 h3{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1em; color: #33393D;}
 a{color: #4732FF; font-weight:bold; text-decoration:underline;}
@@ -46,32 +46,39 @@ a{color: #4732FF; font-weight:bold; text-decoration:underline;}
 }
 header{
     background: #FFFFFF;
-    padding-top:5%;
+    padding-top:3%;
+    padding-bottom:3%;
     padding-left:10%;
     padding-right:10%;
 }
-div{
-    max-width:150%;
-    min-width:20%;
-    height: auto !important;
-}
 .nav-container{
     display:inline-block;
+    margin:3%;
+}
+.nav-button {
+    background: #4732FF;
+    padding: 5px 15px;
+    font-size: 1.00em;
+    font-family: 'Prompt', sans-serif;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-decoration:none;
+    border-radius: 10px;
+}
+.nav-button:hover {
+	background: #280B9E;
 }
 .header-grid{
     display:grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 50% 50%;
     grid-gap:0%;
     grid-template-areas:
-        "content4 logo"
-        "content6 logo";
+        "logo content4"
+        "logo content6";
 }
 #Logo{
     grid-area:logo;
-    width:40%;
-}
-#Nimi{
-    grid-area:content4;
+    width:30%;
 }
 #Nav{
     grid-area:content6;
@@ -129,23 +136,6 @@ div{
 }
 #Slider2{
     grid-area:slider2;
-}
-nav ul li a {
-    background: #4732FF;
-    padding: 6px 17px;
-    font-size: 1.25em;
-    font-family: 'Prompt', sans-serif;
-    color: #FFFFFF;
-    font-weight: 500;
-    text-decoration:none;
-    border-radius: 10px;
-}
-nav ul li a:hover {
-	background: #280B9E;
-}
-nav ul li {
-    display: inline-block;
-    margin: 10px;
 }
 #FinalNote{
     font-style:italic;
