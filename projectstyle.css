@@ -39,17 +39,10 @@ template {display: none;}
 /* Fontit */
 
 body{line-height: 1.5; font-family: 'Open Sans', sans-serif; font-size: 1em; color: #33393D;max-width:1500px;min-width:100px}
-h1{font-family: 'Prompt', sans-serif; font-weight: normal; font-size: 3.5em; color: #33393D;}
-h2{font-family: 'Prompt', sans-serif; font-weight: normal; font-size: 2.5em; color: #33393D;}
+h1{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 3.5em; color: #33393D;}
+h2{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 2.5em; color: #33393D;}
 h3{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1.5em; color: #33393D;}
 a{color: #4732FF; font-weight:bold; text-decoration:underline;}
-
-/* Sivun yleinen layout -> tämän voi poistaa kun muutokset saatu tehtyä! */
-#pageContent {
-    padding-left:10%;
-    padding-right: 10%;
-    border: none;
-}
 
 /* Header, jota käytetään sellaisenaan kaikilla alasivuilla */
 
@@ -108,7 +101,7 @@ footer{
     clear: both;
 }
 
-/* Geneerinen main content */
+/* Geneeriset content blockit, joita käytetään kaikilla sivuilla */
 
 section{
     padding-left:10%;
@@ -117,59 +110,59 @@ section{
 }
 .white-textblock{
     background-color:#FFFFFF;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-gap:10%;
+    grid-template-areas:
+        "text pic";
 }
 .grey-textblock{
     background-color:#EDF4FA;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-gap:10%;
+    grid-template-areas:
+        "pic text";
+}
+.cta{
+    text-align:center;
 }
 
 /* Etusivun spesifinen main content */
 
-.main-grid{
-    display:grid;
-    grid-template-columns: 45% 55%;
-    grid-gap:0%;
-    grid-template-areas:
-        "line line"
-        "content2 aside"
-        "content3 aside"
-        "content4 content4";
+/* Front-general */
+#Front-general-text{
+    grid-area:text;
 }
-#Line{
-    grid-area:line;
+#Front-general-pic{
+    grid-area:pic;
+    margin:auto;
 }
-#Me{
-    grid-area:content2;
+/* Front-vety */
+#Front-vety-text{
+    grid-area:text;
 }
-#MyPic{
-    grid-area:aside;
-    padding-top:7%;
-    padding-left:10%;
-    padding-right:10%;
+#Front-vety-pic{
+    grid-area:pic;
+    margin:auto;
 }
-#Kokemus{
-    grid-area:content3;
+/* Front-hgen */
+#Front-hgen-text{
+    grid-area:text;
 }
-#Duunit{
-    grid-area:content4;
-    background-color: #EDF4FA;
-    padding-top:2.5%;
-    padding-bottom:5%;
-    padding-right:7%;
-    padding-left:7%;
+#Front-hgen-pic{
+    grid-area:pic;
+    margin:auto;
 }
-.slider-container{
-    display:grid;
-    grid-template-columns: 50% 50%;
-    grid-gap:2%;
-    grid-template-areas:
-        "slider1 slider2"
+/* Front-case */
+#Front-case-text{
+    grid-area:text;
 }
-#Slider1{
-    grid-area:slider1;
+#Front-case-pic{
+    grid-area:pic;
+    margin:auto;
 }
-#Slider2{
-    grid-area:slider2;
-}
+
 @media only screen and (max-width: 600px) {
     .main-grid{
         display:grid;
