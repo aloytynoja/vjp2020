@@ -1,5 +1,6 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css 
 Tällä osiolla aluksi normalisoidaan css, ennen kuin luodaan omat tyylit */
+
 html{line-height: 1.15; -webkit-text-size-adjust: 100%;}
 body{margin: 0;}
 main{display: block;}
@@ -36,13 +37,14 @@ template {display: none;}
 [hidden] {display: none;}
 
 /* Fontit */
+
 body{line-height: 1.5; font-family: 'Open Sans', sans-serif; font-size: 1em; color: #33393D;max-width:1500px;min-width:100px}
 h1{font-family: 'Prompt', sans-serif; font-weight: normal; font-size: 3.5em; color: #33393D;}
-h2{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 2.5em; color: #33393D;}
-h3{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1em; color: #33393D;}
+h2{font-family: 'Prompt', sans-serif; font-weight: normal; font-size: 2.5em; color: #33393D;}
+h3{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1.5em; color: #33393D;}
 a{color: #4732FF; font-weight:bold; text-decoration:underline;}
 
-/* Sivun yleinen layout */
+/* Sivun yleinen layout -> tämän voi poistaa kun muutokset saatu tehtyä! */
 #pageContent {
     padding-left:10%;
     padding-right: 10%;
@@ -50,6 +52,7 @@ a{color: #4732FF; font-weight:bold; text-decoration:underline;}
 }
 
 /* Header, jota käytetään sellaisenaan kaikilla alasivuilla */
+
 header{
     background: #FFFFFF;
     padding-top:1.5%;
@@ -94,14 +97,33 @@ header{
 }
 
 /* Footer, jota käytetään sellaisenaan kaikilla alasivuilla */
+
 footer{
     text-align: right;
     padding-top:2%;
     padding-bottom:2%;
+    padding-left:10%;
+    padding-right:10%;
+    border:none;
     clear: both;
 }
 
-/* Etusivun main content */
+/* Geneerinen main content */
+
+section{
+    padding-left:10%;
+    padding-right:10%;
+    border:none;
+}
+.white-textblock{
+    background-color:#FFFFFF;
+}
+.grey-textblock{
+    background-color:#EDF4FA;
+}
+
+/* Etusivun spesifinen main content */
+
 .main-grid{
     display:grid;
     grid-template-columns: 45% 55%;
