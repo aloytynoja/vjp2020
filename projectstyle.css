@@ -71,10 +71,17 @@ header{
     font-weight: 500;
     text-decoration:none;
     border-radius: 10px;
+    box-shadow: 0px 2px #2F2F30;
 }
 .nav-button:hover {
 	background: #280B9E;
 }
+.nav-button:hover:active {
+    box-shadow:none;
+    margin-bottom:-3%;
+    margin-top:3%;
+    background-color: #11024D;
+  }
 .header-grid{
     display:grid;
     grid-template-columns: 45% 55%;
@@ -268,12 +275,15 @@ section{
     grid-template-columns:100%;
     grid-template-areas:
         "general"
+        "picture"
         "goals"
+        "ethics"
         "comments"
 }
 /* Hgen-general */
 #Hgen-general{
     grid-area:general;
+    grid-gap:5%;
 }
 #Hgen-general-text{
     grid-area:text;
@@ -286,22 +296,44 @@ section{
     justify-self:center;
     margin:5%;
 }
-/* Hgen-goals
+#Some-buttons{
+    display:flex;
+    justify-content:space-around;
+}
+/* Hgen-goals */
+#Hgen-goals-pic{
+    grid-area:picture;
+    align-self:center;
+    justify-self:center;
+    margin:5%;
+}
 #Hgen-goals{
     grid-area:goals;
+    display:grid;
+    grid-template-columns: 75% 25%;
+    grid-gap:0%;
+    grid-template-areas:
+        "text pic";
 }
 #Hgen-goals-text{
+    grid-area:text;
+    margin-top:0%;
+    margin-bottom:10%;
+}
+/* Hgen-ethics */
+#Hgen-ethics{
+    grid-area:ethics;
+    display:grid;
+    grid-template-columns: 75% 25%;
+    grid-gap:0%;
+    grid-template-areas:
+        "text pic";
+}
+#Hgen-ethics-text{
     grid-area:text;
     margin-top:2%;
     margin-bottom:10%;
 }
-#Hgen-goals-pic{
-    grid-area:pic;
-    align-self:center;
-    justify-self:center;
-    margin:5%;
-*/
-
 
 /* Muotoilut mobiililaitteille */
 
