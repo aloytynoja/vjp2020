@@ -42,7 +42,7 @@ body{line-height: 1.5; font-family: 'Open Sans', sans-serif; font-size: 1em; col
 h1{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 3.5em; color: #33393D;}
 h2{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 2.5em; color: #33393D;}
 h3{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1.5em; color: #33393D;}
-h4{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1em; color: #33393D;font-style:italic}
+h4{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1.25em; color: #33393D;font-style:italic}
 a{color: #4732FF; font-weight:bold; text-decoration:underline;}
 
 /* Header, jota käytetään sellaisenaan kaikilla alasivuilla */
@@ -260,6 +260,48 @@ section{
 #Front-cta{
     grid-area:cta;
 }
+
+/* H-Gen–sivun spesifit muotoilut */
+
+#Hgen-fullcontent{
+    display:grid;
+    grid-template-columns:100%;
+    grid-template-areas:
+        "general"
+        "goals"
+        "comments"
+}
+/* Hgen-general */
+#Hgen-general{
+    grid-area:general;
+}
+#Hgen-general-text{
+    grid-area:text;
+    margin-top:2%;
+    margin-bottom:10%;
+}
+#Hgen-twitter{
+    grid-area:pic;
+    align-self:center;
+    justify-self:center;
+    margin:5%;
+}
+/* Hgen-goals
+#Hgen-goals{
+    grid-area:goals;
+}
+#Hgen-goals-text{
+    grid-area:text;
+    margin-top:2%;
+    margin-bottom:10%;
+}
+#Hgen-goals-pic{
+    grid-area:pic;
+    align-self:center;
+    justify-self:center;
+    margin:5%;
+*/
+
 
 /* Muotoilut mobiililaitteille */
 
