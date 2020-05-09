@@ -366,13 +366,15 @@ section{
 }
 #Front-case-text{
     grid-area:text;
-    margin-bottom:5%;
+    margin-top:2%;
+    margin-bottom:10%;
 }
 #Front-case-pic{
     grid-area:pic;
     align-self:center;
     justify-self:center;
-    margin:5%;
+    margin-top:8%;
+    margin-bottom:8%;
 }
 #Front-cta{
     grid-area:cta;
@@ -525,6 +527,65 @@ section{
     margin-top:2%;
     margin-bottom:10%;
 }
+
+/*------------------------------------------------------*/
+
+/* Osallistu–sivun spesifit muotoilut */
+
+#Osallistu-fullcontent{
+    display:grid;
+    grid-template-columns:100%;
+    grid-template-areas:
+        "general"
+        "contact"
+        "team";
+}
+/* Osallistu-general */
+#Osallistu-general{
+    grid-area:general;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-gap:10%;
+    grid-template-areas:
+        "text pic"
+}
+#Osallistu-general-text{
+    grid-area:text;
+    margin-bottom:8%;
+}
+#Osallistu-general-pic{
+    grid-area:pic;
+    justify-self:center;
+    align-self:center;
+    margin-right:10%;
+}
+/* Osallistu-contact */
+
+/* To be added here */
+
+/* Osallistu-team */
+#Osallistu-team{
+    grid-area:team;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-gap:10%;
+    grid-template-areas:
+        "text pic"
+}
+#Osallistu-team-text{
+    grid-area:text;
+    margin-top:2%;
+    margin-bottom:8%;
+}
+#Osallistu-team-pic{
+    grid-area:pic;
+    justify-self:center;
+    align-self:center;
+    margin-right:10%;
+    margin-top:8%;
+    margin-bottom:8%;
+}
+
 
 /*==================================================================*/
 
