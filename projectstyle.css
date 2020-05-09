@@ -142,6 +142,8 @@ section{
     padding:2.5%;
     margin-top:2.5%;
     margin-bottom:2.5%;
+    margin-left:1%;
+    margin-right:1%;
     background-color: #4732FF;
     border: none;
     text-transform: uppercase;
@@ -154,6 +156,9 @@ section{
     cursor: pointer;
     user-select: none;
     color:#FFFFFF;
+    display:flex;
+    justify-content:center;
+    overflow-wrap:break-word;
   }
   .button-general:hover {
     background-color: #280B9E;
@@ -165,8 +170,8 @@ section{
     background-color: #11024D;
   }
   .button-cta{
-    width:40%;
-    padding:1.5%;
+    width:60%;
+    padding:1.25%;
     margin-top:13%;
     margin-bottom:2.5%;
     background-color: #4732FF;
@@ -268,6 +273,53 @@ section{
     grid-area:cta;
 }
 
+/* Vetysivun spesifit muotoilut */
+
+#Vety-fullcontent{
+    display:grid;
+    grid-template-columns:100%;
+    grid-template-areas:
+        "general"
+        "info"
+        "case"
+}
+
+/* Vety-general */
+#Vety-general{
+    grid-area:general;
+}
+#Vety-general-text{
+    grid-area:text;
+    margin-top:2%;
+    margin-bottom:10%;
+}
+#Vety-general-pic{
+    grid-area:pic;
+    align-self:center;
+    justify-self:center;
+    margin:5%;
+}
+/* Vety-info */
+#Vety-info{
+    grid-area:info;
+    display:grid;
+    grid-template-columns: 35% 65%;
+    grid-gap:7%;
+    grid-template-areas:
+        "pic text";
+}
+#Vety-info-text{
+    grid-area:text;
+    margin-top:0%;
+    margin-bottom:12%;
+}
+#Vety-info-pic{
+    grid-area:pic;
+    justify-self:center;
+    align-self:start;
+    margin-top:12%;
+}
+
 /* H-Gen–sivun spesifit muotoilut */
 
 #Hgen-fullcontent{
@@ -296,7 +348,7 @@ section{
     justify-self:center;
     margin:5%;
 }
-#Some-buttons{
+.some-buttons{
     display:flex;
     justify-content:space-between;
 }
@@ -305,12 +357,15 @@ section{
     grid-area:picture;
     align-self:center;
     justify-self:center;
-    margin:5%;
+    margin-top:3%;
+    margin-bottom:3%;
+    margin-right:5%;
+    margin-left:5%;
 }
 #Hgen-goals{
     grid-area:goals;
     display:grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 80% 20%;
     grid-gap:0%;
     grid-template-areas:
         "text pic";
@@ -318,13 +373,13 @@ section{
 #Hgen-goals-text{
     grid-area:text;
     margin-top:0%;
-    margin-bottom:10%;
+    margin-bottom:12%;
 }
 /* Hgen-ethics */
 #Hgen-ethics{
     grid-area:ethics;
     display:grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 80% 20%;
     grid-gap:0%;
     grid-template-areas:
         "text pic";
