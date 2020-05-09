@@ -298,7 +298,7 @@ section{
 }
 #Some-buttons{
     display:flex;
-    justify-content:space-around;
+    justify-content:space-between;
 }
 /* Hgen-goals */
 #Hgen-goals-pic{
@@ -399,6 +399,12 @@ section{
         padding:4.5%;
         margin-bottom:5%;
     }
+
+    /* Hgen-sivun spesifit muokkaukset */
+    #Some-buttons{
+        flex-wrap:wrap;
+    }
+    
 }
 
 
