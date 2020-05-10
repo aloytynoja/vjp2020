@@ -11,23 +11,48 @@
     </head>
 
     <body>
+        <script type="text/javascript" src="hgen.js"></script>
 
         <!-- Header: samanlainen kaikille alasivuille -->
 
-        <header class="header-grid">
-            <div id="Logo"><a href="https://users.aalto.fi/~loytyna1/hgen.html"><img src="04_Loytynoja_logo.png" alt="Logo" style="max-width:100%"></div></a>
-            <nav id="Nav">
-                <ul>
-                    <li id="Nav1" class="nav-container1"><a href="https://users.aalto.fi/~loytyna1/hgen.html" class="nav-button">Etusivu</a>
-                    <li id="Nav2" class="nav-container1"><a href="https://users.aalto.fi/~loytyna1/vety.html" class="nav-button">Vety</a>
-				    <li id="Nav3" class="nav-container1"><a href="https://users.aalto.fi/~loytyna1/me.html" class="nav-button">H-Gen</a>
-                    <li id="Nav4" class="nav-container1"><a href="https://users.aalto.fi/~loytyna1/osallistu.html" class="nav-button">Osallistu</a>
-                    <li id="Some1" class="nav-container2"><a href="https://www.facebook.com/"><img src="facebook.svg" alt="Facebook" style="max-width:80%"></a></li>
-                    <li id="Some1" class="nav-container2"><a href="https://www.instagram.com/?hl=fi"><img src="instagram.svg" alt="Instagram" style="max-width:80%"></a></li>
-                    <li id="Some1" class="nav-container2"><a href="https://twitter.com/"><img src="twitter.svg" alt="Twitter" style="max-width:80%"></a></li>
-			    </ul>
-            </nav>
-            <br>
+        <header>
+
+            <!-- Tietokoneen header, sis. navigaatio -->
+            <section class="header-grid">
+                <div id="Logo"><a href="https://users.aalto.fi/~loytyna1/hgen.html"><img src="hgen-logo.png" alt="Logo" style="max-width:200%"></div></a>
+                <nav id="Nav">
+                    <ul>
+				        <li id="Nav1" class="nav-container1"><a href="https://users.aalto.fi/~loytyna1/hgen.html" class="nav-button">Etusivu</a>
+                        <li id="Nav2" class="nav-container1"><a href="https://users.aalto.fi/~loytyna1/vety.html" class="nav-button">Vety</a>
+                        <li id="Nav3" class="nav-container1"><a href="https://users.aalto.fi/~loytyna1/me.html" class="nav-button">H-Gen</a>
+                        <li id="Nav4" class="nav-container1"><a href="https://users.aalto.fi/~loytyna1/osallistu.html" class="nav-button">Osallistu</a>
+                        <li id="Some1" class="nav-container2"><a href="https://www.facebook.com/H-Gen-110805980628237/"><img src="facebook.svg" alt="Facebook" style="max-width:80%"></a></li>
+                        <li id="Some2" class="nav-container2"><a href="https://www.instagram.com/hgenfinland/"><img src="instagram.svg" alt="Instagram" style="max-width:80%"></a></li>
+                        <li id="Some3" class="nav-container2"><a href="https://twitter.com/HGenFinland/"><img src="twitter.svg" alt="Twitter" style="max-width:80%"></a></li>
+			        </ul>
+                </nav>
+            </section>
+
+            <!-- Mobiilinäkymän header, sis. navigaatio -->
+
+            <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+            <!-- Top Navigation Menu -->
+            <div class="topnav">
+                <div id="Mobiililogo"><a href="https://users.aalto.fi/~loytyna1/hgen.html"><img src="hgen-logo.png" alt="Logo" style="max-width:70%"></div></a>
+                <!-- Navigation links (hidden by default) -->
+                <div id="Links">
+                    <a href="https://users.aalto.fi/~loytyna1/hgen.html" class="nav-button">Etusivu</a>
+                    <a href="https://users.aalto.fi/~loytyna1/vety.html" class="nav-button">Vety</a>
+                    <a href="https://users.aalto.fi/~loytyna1/me.html" class="nav-button">H-Gen</a>
+                    <a href="https://users.aalto.fi/~loytyna1/osallistu.html" class="nav-button">Osallistu</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="navClick()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </header>
 
         <!-- Kontentti -->
@@ -66,7 +91,7 @@
                     <h5>2. Tehokkuus</h5>
                     <p>Vedyn energiasisältö massayksikköä kohden on erittäin hyvä, esimerkiksi bensiiniin verrattuna lähes kolminkertainen. Vety on myös hyvä varastoimaan energiaa. Seurauksena vetyenergian käyttö ei edellytä yhtä raskastekoisia – ja tuotannoltaan haitallisia – akkuja kuin sähkövoima.</p>
                     <h5>3. Tasa-arvo</h5>
-                    <p>Vety on arvioitu muodostavam koko universumimme massasta noin 73 %. Vetyä on tasapuolisesti saatavilla ilmakehästä ympäri maailmaa, eikä se tule loppumaan koskaan. Öljykriisit ja -sodat voitaisiin siis unohtaa ainiaaksi.</p>
+                    <p>Vedyn on arvioitu muodostavan koko universumimme massasta noin 73 %. Vetyä on tasapuolisesti saatavilla ilmakehästä ympäri maailmaa, eikä se tule loppumaan koskaan. Öljykriisit ja -sodat voitaisiin siis unohtaa ainiaaksi.</p>
                 </article>
                 <!-- Kuva -->
                 <div id="Vety-info-pic"><img src="vety-firstpic.jpg" alt="Vety" style="max-width:100%"></div>
@@ -141,11 +166,14 @@
             </section>
 
             <!-- Osio 4: Kampanjavideo -->
-            <video id="Case-study-video" controls poster="04_oilstats-global.png" style="max-width:80%">
-                <source src="videoharjoitus_final.mp4" type="video/mp4">
-                <source src="videoharjoitus_final.ogg" type="video/ogg">
-                Your browser does not support the video tag.
-            </video>
+            <section id="Case-study-video">
+                <h5>Tutustu tarkemmin:</h5>
+                <video controls poster="04_oilstats-global.png" style="max-width:100%">
+                    <source src="videoharjoitus_final.mp4" type="video/mp4">
+                    <source src="videoharjoitus_final.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
         
         </main>
             
@@ -154,9 +182,9 @@
         <footer id="Footer">
             <div id="Some">  
                 <ul>
-                    <li id="Some1" class="nav-container2"><a href="https://www.facebook.com/"><img src="facebook.svg" alt="Facebook" style="max-width:100%"></a></li>
-                    <li id="Some1" class="nav-container2"><a href="https://www.instagram.com/?hl=fi"><img src="instagram.svg" alt="Instagram" style="max-width:100%"></a></li>
-                    <li id="Some1" class="nav-container2"><a href="https://twitter.com/"><img src="twitter.svg" alt="Twitter" style="max-width:100%"></a></li>
+                    <li id="Some1" class="nav-container2"><a href="https://www.facebook.com/H-Gen-110805980628237/"><img src="facebook.svg" alt="Facebook" style="max-width:100%"></a></li>
+                    <li id="Some1" class="nav-container2"><a href="https://www.instagram.com/hgenfinland"><img src="instagram.svg" alt="Instagram" style="max-width:100%"></a></li>
+                    <li id="Some1" class="nav-container2"><a href="https://twitter.com/HGenFinland/"><img src="twitter.svg" alt="Twitter" style="max-width:100%"></a></li>
                 </ul>
             </div>
             <p style="font-style:italic">Kyseessä on fiktiivinen kampanja, joka on luotu Aalto-yliopiston Verkkojulkaisemisen perusteet ja Viestintä ja digitaalinen media -kursseilla.</p>

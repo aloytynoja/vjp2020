@@ -75,6 +75,7 @@ header{
     text-decoration:none;
     border-radius: 10px;
     box-shadow: 0px 2px #2F2F30;
+    text-align:center;
 }
 .nav-button:hover {
 	background: #280B9E;
@@ -87,17 +88,26 @@ header{
   }
 .header-grid{
     display:grid;
-    grid-template-columns: 45% 55%;
-    grid-gap:0%;
+    grid-template-columns: 35% 65%;
+    grid-gap:5%;
     grid-template-areas:
         "logo content1";
 }
 #Logo{
     grid-area:logo;
-    width:30%;
+    width:50%;
 }
 #Nav{
     grid-area:content1;
+}
+.topnav{
+    display:none;
+}
+.topnav #Links{
+    display:none;
+}
+.topnav a.icon {
+    display:none;
 }
 
 /* Footer, jota käytetään sellaisenaan kaikilla alasivuilla */
@@ -143,6 +153,8 @@ section{
 .cta{
     text-align:center;
 }
+
+/*-----------------------------------------------------------------------*/
 
 /* Buttons */
 .button-general{
@@ -205,6 +217,8 @@ section{
     margin-top:3%;
     background-color: #11024D;
 }
+
+/*----------------------------------------------------------------------*/
 
 /* Table */
 .case-table{
@@ -301,7 +315,7 @@ section{
 }
 .case-table td {padding:2%;}
 
-/*---------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
 
 /* Etusivun spesifinen main content */
 
@@ -321,14 +335,12 @@ section{
 }
 #Front-general-text{
     grid-area:text;
-    margin-top:2%;
     margin-bottom:10%;
 }
 #Front-general-pic{
     grid-area:pic;
     align-self:center;
     justify-self:center;
-    margin:5%;
 }
 /* Front-vety */
 #Front-vety{
@@ -338,12 +350,12 @@ section{
     grid-area:text;
     margin-top:2%;
     margin-bottom:10%;
+    margin-right:5%;
 }
 #Front-vety-pic{
     grid-area:pic;
     align-self:center;
     justify-self:center;
-    margin:5%;
 }
 /* Front-hgen */
 #Front-hgen{
@@ -358,7 +370,9 @@ section{
     grid-area:pic;
     align-self:center;
     justify-self:center;
-    margin:5%;
+    margin-top:5%;
+    margin-bottom:5%;
+    margin-right:10%;
 }
 /* Front-case */
 #Front-case{
@@ -368,6 +382,7 @@ section{
     grid-area:text;
     margin-top:2%;
     margin-bottom:10%;
+    margin-right:10%;
 }
 #Front-case-pic{
     grid-area:pic;
@@ -380,7 +395,7 @@ section{
     grid-area:cta;
 }
 
-/*---------------------------------------------*/
+/*---------------------------------------------------------------------*/
 
 /* Vetysivun spesifit muotoilut */
 
@@ -399,14 +414,13 @@ section{
 }
 #Vety-general-text{
     grid-area:text;
-    margin-top:2%;
     margin-bottom:10%;
 }
 #Vety-general-pic{
     grid-area:pic;
     align-self:center;
     justify-self:center;
-    margin:5%;
+    margin-right:10%;
 }
 /* Vety-info */
 #Vety-info{
@@ -454,7 +468,7 @@ section{
     margin-bottom:5%;
 }
 
-/*------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
 
 /* H-Gen–sivun spesifit muotoilut */
 
@@ -463,7 +477,6 @@ section{
     grid-template-columns:100%;
     grid-template-areas:
         "general"
-        "picture"
         "goals"
         "ethics"
         "comments"
@@ -475,43 +488,40 @@ section{
 }
 #Hgen-general-text{
     grid-area:text;
-    margin-top:2%;
     margin-bottom:10%;
 }
 #Hgen-twitter{
     grid-area:pic;
     align-self:center;
     justify-self:center;
-    margin-left:5%;
-    margin-right:10%;
-    margin-top:7%;
+    margin-top:6%;
 }
 .some-buttons{
     display:flex;
     justify-content:space-between;
 }
-/* Hgen-goals */
-#Hgen-goals-pic{
-    grid-area:picture;
-    align-self:center;
-    justify-self:center;
-    margin-top:3%;
-    margin-bottom:3%;
-    margin-right:5%;
-    margin-left:5%;
+#Twitter-button{
+    display:none;
 }
+/* Hgen-goals */
 #Hgen-goals{
     grid-area:goals;
     display:grid;
-    grid-template-columns: 80% 20%;
-    grid-gap:0%;
+    grid-template-columns: 50% 50%;
+    grid-gap:10%;
     grid-template-areas:
-        "text pic";
+        "pic text";
 }
 #Hgen-goals-text{
     grid-area:text;
     margin-top:0%;
     margin-bottom:12%;
+    margin-right:10%;
+}
+#Hgen-goals-pic{
+    grid-area:pic;
+    align-self:center;
+    justify-self:center;
 }
 /* Hgen-ethics */
 #Hgen-ethics{
@@ -528,7 +538,7 @@ section{
     margin-bottom:10%;
 }
 
-/*------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
 
 /* Osallistu–sivun spesifit muotoilut */
 
@@ -587,7 +597,7 @@ section{
 }
 
 
-/*==================================================================*/
+/*=====================================================================*/
 
 /* Muotoilut mobiililaitteille */
 
@@ -597,14 +607,36 @@ section{
 
     .white-textblock{
         display:flex;
+        flex-direction:column;
         flex-wrap:wrap;
     }
     .grey-textblock{
         display:flex;
+        flex-direction:column;
         flex-wrap:wrap;
     }
-    #Logo{
-        width:150%;
+    .header-grid{
+        display:none;
+    }
+    .topnav{
+        display:block;
+        overflow:hidden;
+        position:relative;
+
+    }
+    .topnav a{
+        display:flex;
+        flex-direction:column;
+        margin:5%;
+    }
+    .topnav a.icon {
+        display:block;
+        position:absolute;
+        right:0;
+        top:0;
+    }
+    #Mobiililogo{
+        width:70%;
     }
     #Main-header{
         -webkit-hyphens: auto;
@@ -612,27 +644,34 @@ section{
         -ms-hyphens: auto;
         hyphens:auto;
     }
+    .button-general{
+        padding:4.5%;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens:none;
+    }
+    .button-cta{
+        padding:7.5%;
+        margin-bottom:5%;
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens:none;
+    }
+    .nav-container2{
+        margin:3%;
+    }
+
+    /*--------------------------------------------------------*/
 
     /* Etusivun spesifit muotoilut */
 
-    #Front-general{
-        grid-area:general;
-        padding-bottom:10%;
-    }
-    #Front-vety{
-        grid-area:vety;
-        padding-bottom:10%;
-    }
-    #Front-hgen{
-        grid-area:hgen;
-        padding-bottom:10%;
-    }
-    #Front-case{
-        grid-area:case;
-        padding-bottom:10%;
-    }
-    #Front-cta{
-        grid-area:cta;
+    #Front-fullcontent{
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens:auto;
     }
     #Front-general-pic{
         display:none;
@@ -640,25 +679,169 @@ section{
     #Front-vety-pic{
         margin-left:0%;
         margin-right:0%;
+        margin-bottom:8%;
     }
     #Front-hgen-pic{
         margin-left:0%;
         margin-right:0%;
+        margin-bottom:8%;
     }
     #Front-case-pic{
         margin-left:0%;
         margin-right:0%;
-    }
-    .button-cta{
-        padding:4.5%;
-        margin-bottom:5%;
-    }
-
-    /* Hgen-sivun spesifit muokkaukset */
-    #Some-buttons{
-        flex-wrap:wrap;
+        margin-bottom:8%;
     }
     
+    /*--------------------------------------------------------*/
+
+    /* Vetysivun spesifit muokkaukset */
+
+    #Vety-fullcontent{
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens:auto;
+    }
+    #Vety-general-pic{
+        margin-left:0%;
+        margin-right:0%;
+        margin-bottom:5%;
+    }
+    #Vety-info{
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "text"
+            "pic"
+    }
+    #Vety-info-text{
+        grid-area:text;
+    }
+    #Vety-info-pic{
+        display:none;
+    }
+    #Case-study-textcontainer{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    #Case-study-table{
+        display:none;
+    }
+
+    /*--------------------------------------------------------*/
+
+    /* Hgen-sivun spesifit muokkaukset */
+    #Hgen-fullcontent{
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens:auto;
+    }
+    #Hgen-twitter{
+        display:none;
+    }
+    #Hgen-goals{
+        display:grid;
+        grid-template-columns:100%;
+        grid-template-areas:
+            "text"
+            "pic";
+    }
+    #Hgen-goals-pic{
+        margin:0%;
+        padding-bottom:60%;
+        grid-area:pic;
+        align-self:stretch;
+        justify-self:stretch
+    }
+    #Hgen-goals-text{
+        margin:0%;
+        padding-top:5%;
+        padding-bottom:0%;
+        grid-area:text;
+    }
+    #Hgen-ethics{
+        grid-template-columns:100%;
+    }
+    .some-buttons{
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens:none;
+        display:grid;
+        grid-template-columns:100%;
+        grid-template-areas:
+            "twitter"
+            "ig"
+            "fb"
+    }
+    #Contact-button{
+        display:none;
+    }
+    #Twitter-button{
+        display:flex;
+        align-self:center;
+        justify-self:center;
+        grid-area:twitter;
+        padding:15%;
+    }
+    #Ig-button{
+        align-self:center;
+        justify-self:center;
+        grid-area:ig;
+        padding:15%;
+    }
+    #Fb-button{
+        align-self:center;
+        justify-self:center;
+        grid-area:fb;
+        padding:15%;
+    }
+    
+    /*------------------------------------------------------*/
+
+    /* Osallistu-sivun spesifit muokkaukset */
+
+    #Osallistu-fullcontent{
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens:auto;
+    }
+    #Osallistu-general{
+        display:grid;
+        grid-template-columns:100%;
+        grid-template-areas:
+            "text";
+    }
+    #Osallistu-general-pic{
+        display:none;
+    }
+    #Osallistu-general-text{
+        margin:5%;
+        padding-top:5%;
+        padding-bottom:0%;
+        grid-area:text;
+    }
+    #Osallistu-team{
+        display:grid;
+        grid-template-columns:100%;
+        grid-template-areas:
+            "text"
+            "pic";
+    }
+    #Osallistu-team-pic{
+        margin:0%;
+        padding-bottom:60%;
+        grid-area:pic;
+        align-self:stretch;
+        justify-self:stretch
+    }
+    #Osallistu-team-text{
+        margin:0%;
+        padding-top:5%;
+        padding-bottom:0%;
+        grid-area:text;
+    }
 }
 
 
