@@ -46,7 +46,6 @@ h2{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 2.5em; color
 h3{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 2em; color: #33393D;}
 h4{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1.5em; color: #33393D;}
 h5{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1.25em; color: #33393D;font-style:italic}
-h6{line-height:1.5; font-family:'Open Sans', sans-serif; font-size:1em; color: #33393D}
 a{color: #4732FF; font-weight:bold; text-decoration:underline;}
 
 /* Header, jota käytetään sellaisenaan kaikilla alasivuilla */
@@ -562,7 +561,7 @@ section{
 }
 #Osallistu-general-text{
     grid-area:text;
-    margin-bottom:8%;
+    margin-bottom:2%;
 }
 #Osallistu-general-pic{
     grid-area:pic;
@@ -571,8 +570,60 @@ section{
     margin-right:10%;
 }
 /* Osallistu-contact */
-
-/* To be added here */
+#Osallistu-contact{
+    grid-area:contact;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-gap:5%;
+    grid-template-areas:
+        "contactfield comments"
+}
+.contact-field{
+    grid-area:contactfield;
+    margin-top:0%;
+    margin-bottom:8%;
+    margin-left:0%;
+    justify-self:start;
+}
+.contact-field #Sent{
+    display:flex;
+    justify-self:center;
+    margin-top:10%;
+    margin-bottom:5%;
+    margin-left:10%;
+    margin-right:0%;
+}
+.contact-field #Namemark{
+    margin-top:0%;
+    margin-bottom:4%;
+}
+#Prev-comments{
+    grid-area:comments;
+    justify-self:start;
+    align-self:start;
+    margin-right:10%;
+}
+.modify-comment{
+    text-decoration:underline;
+    font-style:italic;
+}
+.all-comments{
+    display:block;
+    height:455px;
+    width:400px;
+    overflow:scroll;
+}
+.answer-header{
+    line-height:2;
+    font-family:'Open Sans', sans-serif;
+    font-size:1em;
+    font-weight:bolder;
+    font-style:italic;
+    color: #33393D
+}
+.modify-comment{
+    visibility:hidden;
+}
 
 /* Osallistu-team */
 #Osallistu-team{

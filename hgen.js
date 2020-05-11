@@ -10,28 +10,147 @@ function navClick() {
 
 /* JS kommenttikentälle */
 
-const nametag = document.createElement("h6");
-var nameelement = document.getElementById("newCommentHeader");
-const commenttag = document.createElement("p");
-var commentelement = document.getElementById("newComment");
-var namemark = document.getElementById("Namemark").value;
-var comment = document.getElementById("Comment").value;
+/* Edellisten kommenttien tallennus muuttujiin */
+let nm1 = "Initial value";
+let c1 = "Initial value";
+let nm2 = "Initial value";
+let c2 = "Initial value";
+let nm3 = "Initial value";
+let c3 = "Initial value";
+let nm4 = "Initial value";
+let c4 = "Initial value";
+let nm5 = "Initial value";
+let c5 = "Initial value";
+let nm6 = "Initial value";
+let c6 = "Initial value";
+let nm7 = "Initial value";
+let c7 = "Initial value";
+let nm8 = "Initial value";
+let c8 = "Initial value";
+let nm9 = "Initial value";
+let c9 = "Initial value";
+let nm10 = "Initial value";
+let c10 = "Initial value";
 
 function commentClick() {
 
-  /* Lisää viesti sivustolle */
-  /* Alla oleva vielä toistaiseksi väärin, käytetty lähde: https://www.tutorialspoint.com/how-to-add-a-new-element-to-html-dom-in-javascript
-  document.getElementById("all-comments").innerHTML =
-    nametag.appendChild(namemark)
-    nameelement.append(nametage)
-    commenttag.appendChild(comment)
-    commentelement.appendChild(commenttag);
-    */
+  /* Syötteiden tallennus muuttujiin */
+  const namemark = document.getElementById("Namemark").value;
+  const comment = document.getElementById("Comment").value;
+
+  /* Lisää kommentti sivustolle: aina uusin kommentti ensimmäiseksi.
+  Kun on kymmenen kommenttipaikkaa on täynnä, ala tyhjentämään lopusta */
+  
+  /* Kommentti nro 1 */
+  if ($('#Namemark1').is(':empty')) {
+    /* Modify-sign näkyviin */
+    document.getElementById("Modify1").style.visibility='visible';
+    /* Päivitä uusin */
+    document.getElementById("Namemark1").innerHTML = namemark;
+    document.getElementById("Text1").innerHTML = comment;
+    /* Tallenna kommentit muuttujiin */
+    nm1 = namemark;
+    c1 = comment;
+  
+  /* Kommentti nro 2 */
+  } else if ($('#Namemark2').is(':empty')) {
+    /* Modify-sign näkyviin */
+    document.getElementById("Modify2").style.visibility='visible';
+    /* Siirrä vanhoja alaspäin */
+    document.getElementById("Namemark2").innerHTML = nm1;
+    document.getElementById("Text2").innerHTML = c1;
+    /* Päivitä uusin */
+    document.getElementById("Namemark1").innerHTML = namemark;
+    document.getElementById("Text1").innerHTML = comment;
+    /* Tallenna kommentit muuttujiin */
+    nm2 = nm1;
+    c2 = c1;
+    nm1 = namemark;
+    c1 = comment;
+
+  /* Kommentti nro 3 */
+  } else if ($('#Namemark3').is(':empty')) {
+    /* Modify-sign näkyviin */
+    document.getElementById("Modify3").style.visibility='visible';
+    /* Siirrä vanhoja alaspäin */
+    document.getElementById("Namemark3").innerHTML = nm2;
+    document.getElementById("Text3").innerHTML = c2;
+    document.getElementById("Namemark2").innerHTML = nm1;
+    document.getElementById("Text2").innerHTML = c1;
+    /* Päivitä uusin */
+    document.getElementById("Namemark1").innerHTML = namemark;
+    document.getElementById("Text1").innerHTML = comment;
+    /* Tallenna kommentit muuttujiin */
+    nm3 = nm2;
+    c3 = c2;
+    nm2 = nm1;
+    c2 = c1;
+    nm1 = namemark;
+    c1 = comment;
+  
+  /* Kommentti nro 4 */
+  } else if ($('#Namemark4').is(':empty')) {
+    /* Modify-sign näkyviin */
+    document.getElementById("Modify4").style.visibility='visible';
+    /* Siirrä vanhoja alaspäin */
+    document.getElementById("Namemark4").innerHTML = nm3;
+    document.getElementById("Text4").innerHTML = c3;
+    document.getElementById("Namemark3").innerHTML = nm2;
+    document.getElementById("Text3").innerHTML = c2;
+    document.getElementById("Namemark2").innerHTML = nm1;
+    document.getElementById("Text2").innerHTML = c1;
+    /* Päivitä uusin */
+    document.getElementById("Namemark1").innerHTML = namemark;
+    document.getElementById("Text1").innerHTML = comment;
+    /* Tallenna kommentit muuttujiin */
+    nm4 = nm3;
+    c4 = c3;
+    nm3 = nm2;
+    c3 = c2;
+    nm2 = nm1;
+    c2 = c1;
+    nm1 = namemark;
+    c1 = comment;
+  
+/* Kommentit nro 5 -> */
+} else {
+  /* Modify-sign näkyviin */
+  document.getElementById("Modify5").style.visibility='visible';
+  /* Siirrä vanhoja alaspäin */
+  document.getElementById("Namemark5").innerHTML = nm4;
+  document.getElementById("Text5").innerHTML = c4;
+  document.getElementById("Namemark4").innerHTML = nm3;
+  document.getElementById("Text4").innerHTML = c3;
+  document.getElementById("Namemark3").innerHTML = nm2;
+  document.getElementById("Text3").innerHTML = c2;
+  document.getElementById("Namemark2").innerHTML = nm1;
+  document.getElementById("Text2").innerHTML = c1;
+  /* Päivitä uusin */
+  document.getElementById("Namemark1").innerHTML = namemark;
+  document.getElementById("Text1").innerHTML = comment;
+  /* Tallenna kommentit muuttujiin */
+  nm5 = nm4;
+  c5 = c4;
+  nm4 = nm3;
+  c4 = c3;
+  nm3 = nm2;
+  c3 = c2;
+  nm2 = nm1;
+  c2 = c1;
+  nm1 = namemark;
+  c1 = comment;
+}
+
+  
 
   /* Tyhjennä kommenttikenttien arvot */
-  document.getElementById("Name-input").value = ""
-  document.getElementById("Email-input").value = ""
-  document.getElementById("Namemark").value = ""
-  document.getElementById("Comment").value = ""
+  document.getElementById("Name-input").value = "";
+  document.getElementById("Email-input").value = "";
+  document.getElementById("Namemark").value = "";
+  document.getElementById("Comment").value = "";
   
+}
+
+function modifyComment(){
+
 }
