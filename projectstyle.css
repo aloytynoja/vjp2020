@@ -46,6 +46,7 @@ h2{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 2.5em; color
 h3{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 2em; color: #33393D;}
 h4{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1.5em; color: #33393D;}
 h5{font-family: 'Prompt', sans-serif; font-weight: bold; font-size: 1.25em; color: #33393D;font-style:italic}
+h6{line-height:1.5; font-family:'Open Sans', sans-serif; font-size:1em; color: #33393D}
 a{color: #4732FF; font-weight:bold; text-decoration:underline;}
 
 /* Header, jota käytetään sellaisenaan kaikilla alasivuilla */

@@ -1,11 +1,12 @@
 <!doctype html>
 
-<html lang="en" class="no js">
+<html lang="fi" class="no-js">
     <head>
         <meta charset="utf-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="projectstyle.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <title>H-Gen: Vedyn kyydissä tulevaisuuteen!</title>
         <meta name="description" content="H-Gen, kampanjasivusto.">
     </head>
@@ -68,13 +69,39 @@
                     <br>
                     <p>Haluatko toimia puhtaamman tulevaisuuden puolesta? H-Genin matkassa se on mahdollista.</p>
                     <p>Jaamme tietoa, järjestämme tapahtumia ja vaikutamme päättäjiin. Osallistua voi juuri niin kuin itse haluat: voit joko ryhtyä kampanja-aktiiviksi, liittyä meililistalle seuraamaan viestintäämme tai jotain siltä väliltä. Kaikki tuki on meille tärkeää.</p>
-                    <p>Aloita työ puhtaamman tulevaisuuden puolesta tänään jättämällä yhteystietosi alle!</p>  
+                    <p>Aloita työ puhtaamman tulevaisuuden puolesta tänään jättämällä yhteystietosi alle! Voit myös jättää sivustolle nimimerkillä kommentin, joka näkyy muille käyttäjille.</p>  
                 </article>
                 <!-- Kuva -->
                 <div id="Osallistu-general-pic"><img src="front-general.jpg" alt="Vety" style="max-width: 100%"></div>
             </section>
 
-            <!-- Osio 2: Interaktiivinen tapa jättää yhteystietonsa ja muokata niitä (React?) -->
+            <!-- Osio 2: Interaktiivinen tapa jättää yhteystietonsa ja muokata niitä  -->
+
+            <section id="Comments">
+                <div class="contact-field">
+                    <section id="Contact-name">
+                        <label for="Name-input"><h5>Nimi</h5></label>
+                        <input id="Name-input" type="text" name="Nimi" size="50">
+                    </section>
+                    <section id="Contact-email">
+                        <label for="Email-input"><h5>Sähköposti</h5></label>
+                        <input id="Email-input" type="text" name="Email" size="50">
+                    </section>
+                    <section id="Contact-message">
+                        <h5>Jätä kommentti sivustolle</h5>
+                        <label for="Namemark">Nimimerkki</label>
+                        <input id="Namemark" type="text" name="Nimimerkki" size="50">
+                        <lable for="Comment">Kommentti</lable>
+                        <input id="Comment" type="text" name="Kommentti" size="200">
+                    </section>
+                    <input id="Sent" type="submit" value="Lähetä" class="button-general" onclick="commentClick()"> 
+                </div>
+            <section id="Prev-comments">
+                <h5>Aiemmat kommentit</h5>
+                <article id="all-comments"></article>
+            </section>
+        </section>
+            
 
             <!-- Osio 3: Tiimin lyhyt esittely -->
 
