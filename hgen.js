@@ -154,48 +154,48 @@ function modifyComment1(){
 function modifyComment2(){
   if (document.getElementById("Text2").contentEditable == "false") {
     document.getElementById("Text2").contentEditable = "true";
-    document.getElementById("Text1").style.caretColor = "red";
-    document.getElementById("Text1").style.border = "thin dashed #33393D" 
+    document.getElementById("Text2").style.caretColor = "red";
+    document.getElementById("Text2").style.border = "thin dashed #33393D" 
     document.getElementById("Modify2").innerHTML = "Valmis";
   } else {
     document.getElementById("Text2").contentEditable = "false";
-    document.getElementById("Text1").style.border = "none" 
+    document.getElementById("Text2").style.border = "none" 
     document.getElementById("Modify2").innerHTML = "Muokkaa";
   }
 }
 function modifyComment3(){
   if (document.getElementById("Text3").contentEditable == "false") {
     document.getElementById("Text3").contentEditable = "true";
-    document.getElementById("Text1").style.caretColor = "red";
-    document.getElementById("Text1").style.border = "thin dashed #33393D" 
+    document.getElementById("Text3").style.caretColor = "red";
+    document.getElementById("Text3").style.border = "thin dashed #33393D" 
     document.getElementById("Modify3").innerHTML = "Valmis";
   } else {
     document.getElementById("Text3").contentEditable = "false";
-    document.getElementById("Text1").style.border = "none" 
+    document.getElementById("Text3").style.border = "none" 
     document.getElementById("Modify3").innerHTML = "Muokkaa";
   }
 }
 function modifyComment4(){
   if (document.getElementById("Text4").contentEditable == "false") {
     document.getElementById("Text4").contentEditable = "true";
-    document.getElementById("Text1").style.caretColor = "red";
-    document.getElementById("Text1").style.border = "thin dashed #33393D" 
+    document.getElementById("Text4").style.caretColor = "red";
+    document.getElementById("Text4").style.border = "thin dashed #33393D" 
     document.getElementById("Modify4").innerHTML = "Valmis";
   } else {
     document.getElementById("Text4").contentEditable = "false";
-    document.getElementById("Text1").style.border = "none" 
+    document.getElementById("Text4").style.border = "none" 
     document.getElementById("Modify4").innerHTML = "Muokkaa";
   }
 }
 function modifyComment5(){
   if (document.getElementById("Text5").contentEditable == "false") {
     document.getElementById("Text5").contentEditable = "true";
-    document.getElementById("Text1").style.caretColor = "red";
-    document.getElementById("Text1").style.border = "thin dashed #33393D" 
+    document.getElementById("Text5").style.caretColor = "red";
+    document.getElementById("Text5").style.border = "thin dashed #33393D" 
     document.getElementById("Modify5").innerHTML = "Valmis";
   } else {
     document.getElementById("Text5").contentEditable = "false";
-    document.getElementById("Text1").style.border = "none" 
+    document.getElementById("Text5").style.border = "none" 
     document.getElementById("Modify5").innerHTML = "Muokkaa";
   }
 }
