@@ -29,7 +29,7 @@ function commentClick() {
   const comment = document.getElementById("Comment").value;
 
   /* Lisää kommentti sivustolle: aina uusin kommentti ensimmäiseksi.
-  Kun on kymmenen kommenttipaikkaa on täynnä, ala tyhjentämään lopusta */
+  Kun viisi kommenttipaikkaa on täynnä, ala tyhjentämään lopusta */
   
   /* Kommentti nro 1 */
   if ($('#Namemark1').is(':empty')) {
