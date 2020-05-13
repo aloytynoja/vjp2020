@@ -119,7 +119,7 @@ function commentClick() {
     localStorage.setItem('text1', document.querySelector('#Text1').innerHTML);
   }
 
-  /* Tyhjennä kommenttikenttien arvot */
+  /* Tyhjennä syötteiden arvot */
   document.getElementById("Name-input").value = "";
   document.getElementById("Email-input").value = "";
   document.getElementById("Namemark").value = "";
@@ -127,7 +127,7 @@ function commentClick() {
   
 }
 
-/* Muokkaukset ja niiden tallentaminen kukin kommenttikenttä kerrallaan */
+/* Muokkaukset ja niiden tallentaminen jokainen kommenttikenttä kerrallaan */
 
 /* Kommentti 1 */
 function modifyComment1(){
