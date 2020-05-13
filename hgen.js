@@ -10,18 +10,6 @@ function navClick() {
 
 /* JS kommenttikentälle */
 
-/* Edellisten kommenttien tallennus muuttujiin */
-let nm1 = "Initial value";
-let c1 = "Initial value";
-let nm2 = "Initial value";
-let c2 = "Initial value";
-let nm3 = "Initial value";
-let c3 = "Initial value";
-let nm4 = "Initial value";
-let c4 = "Initial value";
-let nm5 = "Initial value";
-let c5 = "Initial value";
-
 function commentClick() {
 
   /* Syötteiden tallennus muuttujiin */
@@ -38,97 +26,97 @@ function commentClick() {
     /* Päivitä uusin */
     document.getElementById("Namemark1").innerHTML = namemark;
     document.getElementById("Text1").innerHTML = comment;
-    /* Tallenna kommentit muuttujiin */
-    nm1 = namemark;
-    c1 = comment;
+    /* Tallenna kommentit localStorageen */
+    localStorage.setItem('nm1', document.querySelector('#Namemark1').innerHTML);
+    localStorage.setItem('text1', document.querySelector('#Text1').innerHTML);
   
   /* Kommentti nro 2 */
   } else if ($('#Namemark2').is(':empty')) {
     /* Modify-sign näkyviin */
     document.getElementById("Modify2").style.visibility='visible';
     /* Siirrä vanhoja alaspäin */
-    document.getElementById("Namemark2").innerHTML = nm1;
-    document.getElementById("Text2").innerHTML = c1;
+    document.getElementById("Namemark2").innerHTML = localStorage.getItem('nm1');
+    document.getElementById("Text2").innerHTML = localStorage.getItem('text1');
     /* Päivitä uusin */
     document.getElementById("Namemark1").innerHTML = namemark;
     document.getElementById("Text1").innerHTML = comment;
-    /* Tallenna kommentit muuttujiin */
-    nm2 = nm1;
-    c2 = c1;
-    nm1 = namemark;
-    c1 = comment;
+    /* Tallenna kommentit localStorageen */
+    localStorage.setItem('nm2', document.querySelector('#Namemark2').innerHTML);
+    localStorage.setItem('text2', document.querySelector('#Text2').innerHTML);
+    localStorage.setItem('nm1', document.querySelector('#Namemark1').innerHTML);
+    localStorage.setItem('text1', document.querySelector('#Text1').innerHTML);
 
   /* Kommentti nro 3 */
   } else if ($('#Namemark3').is(':empty')) {
     /* Modify-sign näkyviin */
     document.getElementById("Modify3").style.visibility='visible';
     /* Siirrä vanhoja alaspäin */
-    document.getElementById("Namemark3").innerHTML = nm2;
-    document.getElementById("Text3").innerHTML = c2;
-    document.getElementById("Namemark2").innerHTML = nm1;
-    document.getElementById("Text2").innerHTML = c1;
+    document.getElementById("Namemark3").innerHTML = localStorage.getItem('nm2');
+    document.getElementById("Text3").innerHTML = localStorage.getItem('text2');
+    document.getElementById("Namemark2").innerHTML = localStorage.getItem('nm1');
+    document.getElementById("Text2").innerHTML = localStorage.getItem('text1');
     /* Päivitä uusin */
     document.getElementById("Namemark1").innerHTML = namemark;
     document.getElementById("Text1").innerHTML = comment;
-    /* Tallenna kommentit muuttujiin */
-    nm3 = nm2;
-    c3 = c2;
-    nm2 = nm1;
-    c2 = c1;
-    nm1 = namemark;
-    c1 = comment;
+    /* Tallenna kommentit localStorageen */
+    localStorage.setItem('nm3', document.querySelector('#Namemark3').innerHTML);
+    localStorage.setItem('text3', document.querySelector('#Text3').innerHTML);
+    localStorage.setItem('nm2', document.querySelector('#Namemark2').innerHTML);
+    localStorage.setItem('text2', document.querySelector('#Text2').innerHTML);
+    localStorage.setItem('nm1', document.querySelector('#Namemark1').innerHTML);
+    localStorage.setItem('text1', document.querySelector('#Text1').innerHTML);
   
   /* Kommentti nro 4 */
   } else if ($('#Namemark4').is(':empty')) {
     /* Modify-sign näkyviin */
     document.getElementById("Modify4").style.visibility='visible';
     /* Siirrä vanhoja alaspäin */
-    document.getElementById("Namemark4").innerHTML = nm3;
-    document.getElementById("Text4").innerHTML = c3;
-    document.getElementById("Namemark3").innerHTML = nm2;
-    document.getElementById("Text3").innerHTML = c2;
-    document.getElementById("Namemark2").innerHTML = nm1;
-    document.getElementById("Text2").innerHTML = c1;
+    document.getElementById("Namemark4").innerHTML = localStorage.getItem('nm3');
+    document.getElementById("Text4").innerHTML = localStorage.getItem('text3');
+    document.getElementById("Namemark3").innerHTML = localStorage.getItem('nm2');
+    document.getElementById("Text3").innerHTML = localStorage.getItem('text2');
+    document.getElementById("Namemark2").innerHTML = localStorage.getItem('nm1');
+    document.getElementById("Text2").innerHTML = localStorage.getItem('text1');
     /* Päivitä uusin */
     document.getElementById("Namemark1").innerHTML = namemark;
     document.getElementById("Text1").innerHTML = comment;
-    /* Tallenna kommentit muuttujiin */
-    nm4 = nm3;
-    c4 = c3;
-    nm3 = nm2;
-    c3 = c2;
-    nm2 = nm1;
-    c2 = c1;
-    nm1 = namemark;
-    c1 = comment;
+    /* Tallenna kommentit localStorageen */
+    localStorage.setItem('nm4', document.querySelector('#Namemark4').innerHTML);
+    localStorage.setItem('text4', document.querySelector('#Text4').innerHTML);
+    localStorage.setItem('nm3', document.querySelector('#Namemark3').innerHTML);
+    localStorage.setItem('text3', document.querySelector('#Text3').innerHTML);
+    localStorage.setItem('nm2', document.querySelector('#Namemark2').innerHTML);
+    localStorage.setItem('text2', document.querySelector('#Text2').innerHTML);
+    localStorage.setItem('nm1', document.querySelector('#Namemark1').innerHTML);
+    localStorage.setItem('text1', document.querySelector('#Text1').innerHTML);
   
   /* Kommentit nro 5 -> */
   } else {
     /* Modify-sign näkyviin */
     document.getElementById("Modify5").style.visibility='visible';
     /* Siirrä vanhoja alaspäin */
-    document.getElementById("Namemark5").innerHTML = nm4;
-    document.getElementById("Text5").innerHTML = c4;
-    document.getElementById("Namemark4").innerHTML = nm3;
-    document.getElementById("Text4").innerHTML = c3;
-    document.getElementById("Namemark3").innerHTML = nm2;
-    document.getElementById("Text3").innerHTML = c2;
-    document.getElementById("Namemark2").innerHTML = nm1;
-    document.getElementById("Text2").innerHTML = c1;
+    document.getElementById("Namemark5").innerHTML = localStorage.getItem('nm4');
+    document.getElementById("Text5").innerHTML = localStorage.getItem('text4');
+    document.getElementById("Namemark4").innerHTML = localStorage.getItem('nm3');
+    document.getElementById("Text4").innerHTML = localStorage.getItem('text3');
+    document.getElementById("Namemark3").innerHTML = localStorage.getItem('nm2');
+    document.getElementById("Text3").innerHTML = localStorage.getItem('text2');
+    document.getElementById("Namemark2").innerHTML = localStorage.getItem('nm1');
+    document.getElementById("Text2").innerHTML = localStorage.getItem('text1');
     /* Päivitä uusin */
     document.getElementById("Namemark1").innerHTML = namemark;
     document.getElementById("Text1").innerHTML = comment;
-    /* Tallenna kommentit muuttujiin */
-    nm5 = nm4;
-    c5 = c4;
-    nm4 = nm3;
-    c4 = c3;
-    nm3 = nm2;
-    c3 = c2;
-    nm2 = nm1;
-    c2 = c1;
-    nm1 = namemark;
-    c1 = comment;
+    /* Tallenna kommentit localStorageen */
+    localStorage.setItem('nm5', document.querySelector('#Namemark5').innerHTML);
+    localStorage.setItem('text5', document.querySelector('#Text5').innerHTML);
+    localStorage.setItem('nm4', document.querySelector('#Namemark4').innerHTML);
+    localStorage.setItem('text4', document.querySelector('#Text4').innerHTML);
+    localStorage.setItem('nm3', document.querySelector('#Namemark3').innerHTML);
+    localStorage.setItem('text3', document.querySelector('#Text3').innerHTML);
+    localStorage.setItem('nm2', document.querySelector('#Namemark2').innerHTML);
+    localStorage.setItem('text2', document.querySelector('#Text2').innerHTML);
+    localStorage.setItem('nm1', document.querySelector('#Namemark1').innerHTML);
+    localStorage.setItem('text1', document.querySelector('#Text1').innerHTML);
   }
 
   /* Tyhjennä kommenttikenttien arvot */
@@ -139,61 +127,102 @@ function commentClick() {
   
 }
 
+/* Muokkaukset ja niiden tallentaminen kukin kommenttikenttä kerrallaan */
+
+/* Kommentti 1 */
 function modifyComment1(){
+  /* Tee kommenttikenttä muokattavaksi ja muokkaa visuaalisia elementtejä */
   if (document.getElementById("Text1").contentEditable == "false") {
     document.getElementById("Text1").contentEditable = "true";
     document.getElementById("Text1").style.caretColor = "red";
     document.getElementById("Text1").style.border = "thin dashed #33393D" 
     document.getElementById("Modify1").innerHTML = "Valmis";
+
+  /* Muokkaus pois päältä */
   } else {
+    /* Muokatun elementin tallennus */
+    localStorage.setItem('text1', document.querySelector('#Text1').innerHTML)
+    /* Muokkaa visuaaliset elementit alkuperäisiksi */
     document.getElementById("Text1").contentEditable = "false";
     document.getElementById("Text1").style.border = "none" 
     document.getElementById("Modify1").innerHTML = "Muokkaa";
   }
 }
+
+/* Kommentti 2 */
 function modifyComment2(){
+  /* Tee kommenttikenttä muokattavaksi ja muokkaa visuaalisia elementtejä */
   if (document.getElementById("Text2").contentEditable == "false") {
     document.getElementById("Text2").contentEditable = "true";
     document.getElementById("Text2").style.caretColor = "red";
     document.getElementById("Text2").style.border = "thin dashed #33393D" 
     document.getElementById("Modify2").innerHTML = "Valmis";
+
+  /* Muokkaus pois päältä */
   } else {
+    /* Muokatun elementin tallennus */
+    localStorage.setItem('text2', document.querySelector('#Text2').innerHTML)
+    /* Muokkaa visuaaliset elementit alkuperäisiksi */
     document.getElementById("Text2").contentEditable = "false";
     document.getElementById("Text2").style.border = "none" 
     document.getElementById("Modify2").innerHTML = "Muokkaa";
   }
 }
+
+/* Kommentti 3 */
 function modifyComment3(){
+  /* Tee kommenttikenttä muokattavaksi ja muokkaa visuaalisia elementtejä */
   if (document.getElementById("Text3").contentEditable == "false") {
     document.getElementById("Text3").contentEditable = "true";
     document.getElementById("Text3").style.caretColor = "red";
     document.getElementById("Text3").style.border = "thin dashed #33393D" 
     document.getElementById("Modify3").innerHTML = "Valmis";
+
+  /* Muokkaus pois päältä */
   } else {
+    /* Muokatun elementin tallennus */
+    localStorage.setItem('text3', document.querySelector('#Text3').innerHTML)
+    /* Muokkaa visuaaliset elementit alkuperäisiksi */
     document.getElementById("Text3").contentEditable = "false";
     document.getElementById("Text3").style.border = "none" 
     document.getElementById("Modify3").innerHTML = "Muokkaa";
   }
 }
+
+/* Kommentti 4 */
 function modifyComment4(){
+  /* Tee kommenttikenttä muokattavaksi ja muokkaa visuaalisia elementtejä */
   if (document.getElementById("Text4").contentEditable == "false") {
     document.getElementById("Text4").contentEditable = "true";
     document.getElementById("Text4").style.caretColor = "red";
     document.getElementById("Text4").style.border = "thin dashed #33393D" 
     document.getElementById("Modify4").innerHTML = "Valmis";
+
+  /* Muokkaus pois päältä */
   } else {
+    /* Muokatun elementin tallennus */
+    localStorage.setItem('text4', document.querySelector('#Text4').innerHTML)
+    /* Muokkaa visuaaliset elementit alkuperäisiksi */
     document.getElementById("Text4").contentEditable = "false";
     document.getElementById("Text4").style.border = "none" 
     document.getElementById("Modify4").innerHTML = "Muokkaa";
   }
 }
+
+/* Kommentti 5 */
 function modifyComment5(){
+  /* Tee kommenttikenttä muokattavaksi ja muokkaa visuaalisia elementtejä */
   if (document.getElementById("Text5").contentEditable == "false") {
     document.getElementById("Text5").contentEditable = "true";
     document.getElementById("Text5").style.caretColor = "red";
     document.getElementById("Text5").style.border = "thin dashed #33393D" 
     document.getElementById("Modify5").innerHTML = "Valmis";
+
+  /* Muokkaus pois päältä */
   } else {
+    /* Muokatun elementin tallennus */
+    localStorage.setItem('text5', document.querySelector('#Text5').innerHTML)
+    /* Muokkaa visuaaliset elementit alkuperäisiksi */
     document.getElementById("Text5").contentEditable = "false";
     document.getElementById("Text5").style.border = "none" 
     document.getElementById("Modify5").innerHTML = "Muokkaa";
