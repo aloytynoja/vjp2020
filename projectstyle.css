@@ -133,6 +133,7 @@ section{
     padding-left:10%;
     padding-right:10%;
     border:none;
+    margin:auto;
 }
 .white-textblock{
     background-color:#FFFFFF;
@@ -473,6 +474,12 @@ section{
     align-self:center;
     margin-bottom:5%;
 }
+#Contact-button{
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens:auto;
+}
 
 /*------------------------------------------------------------------------*/
 
@@ -508,6 +515,22 @@ section{
 }
 #Twitter-button{
     display:none;
+}
+#Fb-button{
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens:auto;
+    align-self:center;
+    justify-self:center;
+}
+#Ig-button{
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens:auto;
+    align-self:center;
+    justify-self:center;
 }
 /* Hgen-goals */
 #Hgen-goals{
